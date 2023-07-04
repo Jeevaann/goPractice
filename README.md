@@ -26,5 +26,5 @@
       * Number includes both integers and float
       * Integers are 2 types. 1. uint (unsigned integers) -> >=0 2. int (signed integers) -> both positive and negative numbers
       * float is of two types. float32 and float64.
-      * string occupies 16 bytes.
-      * bool takes values true and false. It occupies 1 byte of memory.
+   * string occupies 16 bytes.
+   * bool takes values true and false. It occupies 1 byte of memory.
