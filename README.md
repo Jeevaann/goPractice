@@ -55,7 +55,7 @@
    package main
    import "fmt"
    func main() {
-     fmt.Print("Hello", "\n")  //Here \n 
+     fmt.Print("Hello", "\n")  //Here \n means new line. Prints Hello and moves to new line
      fmt.Print("Jeevan")
    }
 ```
@@ -75,3 +75,36 @@
      fmt.Printf("Hello %s", Object arg(s))
    }
 ```
+
+# Format specifiers
+* format specifiers start with "%" symbol
+* %v -> formats the value in default format
+* %T -> type of the value
+* %d -> integers
+* %f -> floating numbers
+* %.2f -> floating numbers upto 2 decimal points
+* %t -> true or false
+* %c -> character
+* %q -> quoted characters/string
+
+
+
+
+# variable declaration
+
+* var name string = "admin"
+* var name,email string = "admin","admin@gmail.com"
+```
+* var(name string = "admin
+  phone int = 999999999)
+```
+* name := "admin"
+
+# local and global variables
+* The inner blocks can access the variables declared in the outer blocks.
+* The outer blocks cannot access the variables declared in the inner blocks.
+
+# default values 
+* string = ""
+* bool = false
+* float = 0.00
