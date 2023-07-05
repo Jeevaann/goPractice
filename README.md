@@ -36,36 +36,42 @@
  * var f float64 = 77.90
 
  * Types of print statements in golang:
+ ```
    package main
    import "fmt"
    func main() {
      fmt.Println("Hello")  //this will print Hello and moves to new line
    }
-
+```
+```
    package main
    import "fmt"
    func main() {
      fmt.Print("Hello")  //this will print Hello and the cursor is in the same line
      fmt.Print("World")
    }
-
+```
+```
    package main
    import "fmt"
    func main() {
      fmt.Print("Hello", "\n")  //Here \n 
      fmt.Print("Jeevan")
    }
-
+```
+```
    package main
    import "fmt"
    func main() {
      var user string = "Jeevan"
      fmt.Print("Hello ", user)
    }
-
+```
+```
    package main
    import "fmt"
    func main() {
      var user string = "Jeevan"
      fmt.Printf("Hello %s", Object arg(s))
    }
+```
