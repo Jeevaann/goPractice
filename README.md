@@ -1,4 +1,4 @@
-# goPractice
+# Golang Practice
 * The starting line of the program should be a package.
 * The package main is a special package which contains special function main.
 * Main function acts as entry point for the executable programs. No need to call the main function explicitly.
@@ -72,7 +72,7 @@
    import "fmt"
    func main() {
      var user string = "Jeevan"
-     fmt.Printf("Hello %s", Object arg(s))
+     fmt.Printf("Hello %s", Object arg(s))  //note: If you are using format specifiers then we should use Printf
    }
 ```
 
@@ -90,7 +90,7 @@
 
 
 
-# variable declaration
+# Variable declaration
 
 * var name string = "admin"
 * var name,email string = "admin","admin@gmail.com"
@@ -100,11 +100,14 @@
 ```
 * name := "admin"
 
-# local and global variables
+# Local and global variables
 * The inner blocks can access the variables declared in the outer blocks.
 * The outer blocks cannot access the variables declared in the inner blocks.
 
-# default values 
+# Default values 
 * string = ""
 * bool = false
 * float = 0.00
+
+# Taking user input
+* To take the input from the user 
