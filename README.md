@@ -29,7 +29,7 @@
    * string occupies 16 bytes.
    * bool takes values true and false. It occupies 1 byte of memory.
  * Syntax for variable declaration:
- * var <variable name> <data type> = <value>
+ * var <variable_name> <data_type> = <value>
  * var s string = "Hello world!"
  * var i int = 100
  * var b bool = false
@@ -148,4 +148,37 @@ func main() {
   fmt.Printf("Type: %v \n", reflect.TypeOf(1000))
   fmt.Printf("Type: %T \n", name)
 }
+```
+
+# Converting between data types (Type casting)
+*The process of converting one data to another is called Type casting.
+* converting int to float
+```
+  package main
+  import "fmt"
+  func main() {
+    var i int = 50
+    var f float64 = float64(i)
+    fmt.Printf(%v is converted to %T type", i, f)
+}
+```
+
+* To convert string to integer and vice-versa, strconv package is used
+```
+  package main
+  import (
+    "fmt"
+    "strconv"
+  )
+  func main() {
+    var i int = 50
+    var s string = strconv.Itoa(i) //converts integer to string
+    fmt.Printf("%v \n",s)
+    fmt.Printf("%T \n",s)
+    var name string = "200"
+    num, err := strconv.Atoi(name) //converts string to integer. This returns 2 values.
+    fmt.Printf("%v \n", num)
+    fmt.Printf("%T \n", num)
+    fmt.Printf("%v \n", err)
+  }
 ```
