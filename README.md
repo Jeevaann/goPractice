@@ -188,10 +188,10 @@ func main() {
 * short hand declaration (:=) should not be used while declaring constant.
 * const <variable_name> <data_type> = <value> . Data_type is optional.
 * There are 2 types. 1.Typed 2.Untyped
-# untyped
+### untyped
 * data_type is not explicitly defined. More flexible
 * Eg: const age = 20
 * Eg: const name,age = "Dhruva", 20
-# typed
+### typed
 * data_type is explicitly defined.
 * Eg: const name string = "Dhruva"
