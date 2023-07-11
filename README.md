@@ -110,4 +110,31 @@
 * float = 0.00
 
 # Taking user input
-* To take the input from the user 
+* To take the input from the user we use scanf.
+```
+package main
+import "fmt"
+func main() {
+  var name string
+  var age int
+  fmt.Print("Enter name and age")
+  fmt.Scanf("%s %d", &name, &age)
+  fmt.Println("name is ", name)
+  fmt.Println("age is ", age)
+}
+```
+```
+package main
+import "fmt"
+func main() {
+  var name string
+  var age int
+  fmt.Print("Enter Name and age")
+  count,err := fmt.Scanf("%s %d", &name, &age)
+  fmt.Println("count: ", count)  //Here count has the number of correct input variables set.
+  fmt.Println("error: ", err)  //if there is an error it will be stored in err variable.
+  fmt.Println("name is ", name)
+  fmt.Println("age is ", age)
+}
+```
+
