@@ -98,7 +98,7 @@
 * var(name string = "admin
   phone int = 999999999)
 ```
-* name := "admin"
+* name := "admin"  -> short hand variable declaration
 
 # Local and global variables
 * The inner blocks can access the variables declared in the outer blocks.
@@ -145,7 +145,7 @@ import (
 )
 func main() {
   var name string := "Dhruva"
-  fmt.Printf("Type: %v \n", reflect.TypeOf(1000))
+  fmt.Printf("Type: %v \n", reflect.TypeOf(1000)) //reflect package gives the type of variable, literal or constant
   fmt.Printf("Type: %T \n", name)
 }
 ```
@@ -182,3 +182,16 @@ func main() {
     fmt.Printf("%v \n", err)
   }
 ```
+
+# Constants
+* variable should be given a value while declaration. variable value can't be modified once declared.
+* short hand declaration (:=) should not be used while declaring constant.
+* const <variable_name> <data_type> = <value> . Data_type is optional.
+* There are 2 types. 1.Typed 2.Untyped
+# untyped
+* data_type is not explicitly defined. More flexible
+* Eg: const age = 20
+* Eg: const name,age = "Dhruva", 20
+# typed
+* data_type is explicitly defined.
+* Eg: const name string = "Dhruva"
