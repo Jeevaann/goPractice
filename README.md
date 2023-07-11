@@ -137,4 +137,15 @@ func main() {
   fmt.Println("age is ", age)
 }
 ```
-
+```
+package main
+import (
+"fmt"
+"reflect"
+)
+func main() {
+  var name string := "Dhruva"
+  fmt.Printf("Type: %v \n", reflect.TypeOf(1000))
+  fmt.Printf("Type: %T \n", name)
+}
+```
