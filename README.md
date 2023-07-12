@@ -225,3 +225,8 @@ func main() {
  * (%) modulus -> returns the remainder
  * (++) increment
  * (--) decrement
+
+### Logical operator:
+ * logical AND (&&)
+ * logical OR (||)
+ * logical NOT (!)
