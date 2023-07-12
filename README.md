@@ -195,3 +195,33 @@ func main() {
 ### typed
 * data_type is explicitly defined.
 * Eg: const name string = "Dhruva"
+
+# Operators and Operands
+### Operators
+* Types of Operators:
+ * Comparision operators
+ * Assignment operators
+ * Arithmatic operators
+ * Bitwise operators
+ * Logical operators
+
+### Comparision operator:
+ * compares two operands of same data type and yields a boolean value (true/false). If two operands of different data types are compared will result in error.
+ * (==) equal
+ * (!=) not equal
+ * (>) greater than
+ * (>=) greater than or equal to
+ * (<) less than
+ * (<=) less than or equal to
+
+### Arithmatic operator:
+ * common arithmatic operations such as addition, subtraction, multiplication, division etc.
+ * (+) addition
+    * when addition operator is used on int type, it will result in sum of those numbers. If used on strings, then it will concat the strings. If used between int and 
+      float or int and string it will result in error.
+ * (-) subtraction
+ * (*) multiplication
+ * (/) division -> returns the quotient
+ * (%) modulus -> returns the remainder
+ * (++) increment
+ * (--) decrement
