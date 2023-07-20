@@ -421,4 +421,5 @@ func main() {
 }
 output: The value is 30.
 ```
+Note: When using switch with conditionals - we don't specify expression after switch.
 Note: In go the switch case statement has an internal break statement.
