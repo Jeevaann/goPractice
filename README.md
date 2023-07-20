@@ -367,4 +367,58 @@ Note: The else block or else if block must after just after the completion of pr
       fmt.Println("Fruit does not match")
    }
 }
-``` 
+```
+# Switch statement:
+```
+package main
+import "fmt"
+func main() {
+  var i int = 20
+  switch i {
+    case 10:
+      fmt.Println("The value is 10")
+    case 20,30:
+      fmt.Println("The value is either 20 or 30)
+    default:
+      fmt.Println("The value is neither 10,20 nor 30)
+}
+}
+output: The value is either 20 or 30.
+```
+* fallthrough is a keyword used in switch block. If fallthrough is used then the successive blocks will also get executed.
+```
+package main
+import "fmt"
+func main() {
+  var i int = 20
+  switch i {
+    case 10:
+      fmt.Println("The value is 10")
+    case 20,30:
+      fmt.Println("The value is either 20 or 30)
+      fallthrough
+    default:
+      fmt.Println("The value is neither 10,20 nor 30)
+}
+}
+output: The value is either 20 or 30.
+The value is neither 10,20 nor 30.
+```
+```
+package main
+import "fmt"
+func main() {
+  var i int = 20
+  var j int = 10
+  switch {
+    case a+b == 30:
+      fmt.Println("The value is 30")
+    case a+b >= 30:
+      fmt.Println("The value is greater than or equal to 30)
+    default:
+      fmt.Println("The value is neither 10,20 nor 30)
+}
+}
+output: The value is 30.
+```
+Note: In go the switch case statement has an internal break statement.
