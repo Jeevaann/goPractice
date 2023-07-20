@@ -230,3 +230,94 @@ func main() {
  * logical AND (&&)
  * logical OR (||)
  * logical NOT (!)
+
+### Assignment operator:
+ * assign (=)
+ * add and assign (+=) x += y => x = x + y
+ * subtract and assign (-=) x -= y => x = x - y
+ * multiply and assign (*=) x *= y => x = x * y
+ * divide and assign (/=) x /= y => x = x/y
+ * modulus and assign (%=) x %= y => x = x % y
+
+### Bitwise operator
+ * bitwise AND (&): Takes two numbers as operands and does AND on every bit of the two numbers.
+ * Eg: 12 in binary is 00001100. 25 in binary is 00011001. If we do 12 & 25 then we get 00001000.
+```
+   00001100 => 12(decimal)
+ & 00011001 => 25(decimal)
+-------------
+   00001000 => 8(decimal)
+-------------
+```
+```
+package main
+import "fmt"
+func main(){
+  var x,y int = 12,25
+  z := x & y
+  fmt.Println(z)
+}
+```
+ * bitwise OR (|): Takes two numbers as operands and does OR on every bit of the two numbers.
+ * Eg: 12 in binary is 00001100. 25 in binary is 00011001. If we do 12 | 25 then we get 00011101.
+```
+   00001100 => 12(decimal)
+ | 00011001 => 25(decimal)
+-------------
+   00011101 => 29(decimal)
+-------------
+```
+```
+package main
+import "fmt"
+func main(){
+  var x,y int = 12,25
+  z := x | y
+  fmt.Println(z)
+}
+```
+ * bitwise XOR (^): Takes two numbers as operands and does XOR on every bit of the two numbers.
+ * The result of XOR is 1 only when both the bits are opposite.
+ * Eg: 12 in binary is 00001100. 25 in binary is 00010101. If we do 12 | 25 then we get 00010101.
+```
+   00001100 => 12(decimal)
+ ^ 00011001 => 25(decimal)
+-------------
+   00010101 => 21(decimal)
+-------------
+```
+```
+package main
+import "fmt"
+func main(){
+  var x,y int = 12,25
+  z := x ^ y
+  fmt.Println(z)
+}
+```
+ * Left shift (<<): Shifts all bits towards left by a certain number of specified bits.
+ * The bit positions that have been vacated by the left shift operator are filled by 0.
+ * Eg: 212 = 11010100 (binary)
+ * 212 << 1 = 110101000 (424)
+ ```
+package main
+import "fmt"
+func main(){
+  var x int = 212
+  z := x << 1
+  fmt.Println(z)
+}
+```
+ * Right shift (>>): Shifts all bits towards right by a certain number of specified bits.
+ * The bit positions that have been vacated by the right shift operator are filled by 0.
+ * Eg: 212 = 11010100 (binary)
+ * 212 >> 2 = 00110101 (53)
+  ```
+package main
+import "fmt"
+func main(){
+  var x int = 212
+  z := x >> 2
+  fmt.Println(z)
+}
+```
