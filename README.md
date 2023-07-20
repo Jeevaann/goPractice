@@ -423,3 +423,25 @@ output: The value is 30.
 ```
 Note: When using switch with conditionals - we don't specify expression after switch.
 Note: In go the switch case statement has an internal break statement.
+
+### Looping
+* for loop
+```
+ for initialization; condition; post{
+     // statement
+ }
+```
+```
+  for i:=1;i<=5;i++ {
+     fmt.Println(i)
+  }
+```
+```
+  i := 1
+  for i<=5 {
+     fmt.Println(i)
+     i++
+  }
+```
+* Break statement will come out of the loop.
+* Continue statement will move to the next iteration.
