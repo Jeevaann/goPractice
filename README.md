@@ -321,3 +321,49 @@ func main(){
   fmt.Println(z)
 }
 ```
+
+# Control flow
+### if-else
+```
+  if (condition) {
+    // block to be executed if the condition is met
+  } else {
+    // block to be executed if condition is not met
+  }
+```
+* Valid syntax:
+```
+  if (condition) {
+    // block to be executed if the condition is met
+} else if (condition) {
+    // block to be executed if the condition is met
+} else {
+    // block to be executed if none of the condition is met
+}
+```
+* Invalid syntax:
+```
+  if (condition) {
+    // block to be executed if the condition is met
+  }
+  else {
+    // block to be executed if condition is not met
+  }
+```
+Note: The else block or else if block must after just after the completion of previous block.
+```
+ package main
+ import "fmt"
+ func main() {
+   var fruit string
+   fmt.Print("Enter the fruit: ")
+   fmt.Scanf("%v", &fruit)
+   if fruit == "grapes" {
+      fmt.Println("Fruit is a grape")
+   } else if fruit == "orange" {
+      fmt.Println("Fruit is an orange")
+   } else {
+      fmt.Println("Fruit does not match")
+   }
+}
+``` 
