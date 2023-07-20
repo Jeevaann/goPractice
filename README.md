@@ -159,7 +159,7 @@ func main() {
   func main() {
     var i int = 50
     var f float64 = float64(i)
-    fmt.Printf(%v is converted to %T type", i, f)
+    fmt.Printf("%v is converted to %T type", i, f)
 }
 ```
 
