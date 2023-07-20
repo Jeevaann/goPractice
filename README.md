@@ -323,6 +323,7 @@ func main(){
 ```
 
 # Control flow
+* we can write "If" block independently without else if or else block
 ### if-else
 ```
   if (condition) {
