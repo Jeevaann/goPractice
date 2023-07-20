@@ -452,6 +452,7 @@ Arrays are elements containing similar data type.
 * var <array_name> [array_length] <array_datatype> = [arrya_length] <array_datatype> <elements>
 * Eg: var grades [5] int = [5] int{50,60,80,90,20}
 * The elements in the array can be less than or equal to the length of the array but should not exceed the length.
+* If we give more elements than the length of the array then it will throw an error.
 * Eg: grades := [5] int{50,60,80,90,20} -> short hand declaration
 * To retrieve the elements in the array, grades[1].
 ```
