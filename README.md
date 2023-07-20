@@ -452,6 +452,7 @@ Arrays are elements containing similar data type.
 * var <array_name> [array_length] <array_datatype> = [arrya_length] <array_datatype> <elements>
 * Eg: var grades [5] int = [5] int{50,60,80,90,20}
 * The elements in the array can be less than or equal to the length of the array but should not exceed the length.
+* In arrays, the length and the capacity are equal.
 * If we give more elements than the length of the array then it will throw an error.
 * Eg: grades := [5] int{50,60,80,90,20} -> short hand declaration
 * To retrieve the elements in the array, grades[1].
@@ -488,5 +489,36 @@ func main() {
         fmt.Println(grades[i][j])
         }
     }
+}
+```
+### slicing of an Array
+* arr := [5]int{1,2,3,4,5}
+* slice := arr[start_index:end_index]
+* slice := []<datatype>{<values>}  //no need to specify the length of the slice
+* slice := make([]<datatype>, length, capacity)  //used to create an empty slice
+* len function will give the length and cap function gives the capacity.
+* The slice taken from the array will reference to the array. It means, if we change the value of one of the index of a slice then the value from the main array will also be replaced.
+* append function is used to append values to the slice. We can also append one slice to another slice.
+* slice_1 := arr[2:5]
+* slice_2 := arr[1]
+* slice_3 := append(slice_1, slice_2...)  //the 3 dots after slice_2 are mandatory.
+* If we want to append some values to slice then slice_4 = append(slice_1, value_1, value_2)
+* num := copy(dest_slice, src_slice)
+* The data type of both src and dest slice should be same inorder to copy.
+
+### Maps
+* Unordered collection of key/value pairs.
+* Provide efficient add, get and delete operations.
+* var <map_name> map[key_data_type]<value_data_type> -> If we initialize the map using this then we cannot add elements to the map.
+* <map_name> := make(map[key_data_type]<value_data_type>,<initial_capacity>)
+* <map_name> := map[key_data_type]<value_data_type>{key/value pairs}
+* Eg: map := map[string]<string>{"en":"English", "hi":"Hindi", "Te":"Telugu"}
+* value,found := <map_name>["en"]. The value will give the value associated with the key "en". The found will give the bool value. If "en" key is there then the found value is true.
+* <map_name>["it"] = "Italian". By this we can add key/value pairs to the map.
+* <map_name>["en"] = "English Language". By this we can update the existing key/value pairs.
+* delete(<map_name>,<key_name>). By this we can delete the key and the corresponding value.
+```
+for key, value := range map {
+    fmt.Println(key," => ",value)
 }
 ```
