@@ -445,3 +445,47 @@ Note: In go the switch case statement has an internal break statement.
 ```
 * Break statement will come out of the loop.
 * Continue statement will move to the next iteration.
+
+### Arrays
+Arrays are elements containing similar data type.
+* Declaring an array:
+* var <array_name> [array_length] <array_datatype> = [arrya_length] <array_datatype> <elements>
+* Eg: var grades [5] int = [5] int{50,60,80,90,20}
+* The elements in the array can be less than or equal to the length of the array but should not exceed the length.
+* Eg: grades := [5] int{50,60,80,90,20} -> short hand declaration
+* To retrieve the elements in the array, grades[1].
+```
+  package main
+  import "fmt"
+  func main() {
+    var grades [5] int = [5] int{50,60,80,90,20}
+    var l int = len(grades)
+    for i:=0;i<l;i++{
+        fmt.Println(grades[i])
+    }
+  }
+```
+```
+  package main
+  import "fmt"
+  func main() {
+    grades := [5] int{50,60,80,70,90}
+    for index,elements := range grades {       //here range is the keyword used in the arrays
+        fmt.Println(index," => ",elements)
+    }
+  }
+```
+* 2D-Array
+```
+package main
+import "fmt"
+func main() {
+  grades := [3][2] int{{30,40},{60,70},{80,90}}
+  var l int = len(grades)
+    for i:=0;i<l;i++{
+        for j:=0;j<=1;j++{
+        fmt.Println(grades[i][j])
+        }
+    }
+}
+```
