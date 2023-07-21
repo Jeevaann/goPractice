@@ -543,3 +543,44 @@ for key, value := range map {
   }
   ```
   * Note: Function names should not start with numbers and should not contain spaces.
+
+* If a functions returns multiple values then we can declare function in the following way:
+  ```
+  func <function_name>(function_parameters) <return_types> {
+     // function body
+  }
+  ```
+  ```
+  func arithmeticOperations(a int, b int) (sum int, diff int) {
+     sum = a + b     // as sum and diff are already initialized, no need to use shorthand notation(:=)
+     diff = a - b
+     return
+  }
+  ```
+  ```
+    func arithmeticOperations(a int, b int) (int, int) {
+     sum := a + b     // as sum and diff are not initialized, we should use shorthand notation(:=)
+     diff := a - b
+     return sum, diff
+  }
+  ```
+  ### Variadic functions
+  * Variadic functions are the functions that takes arbitary number of arguments of the defined datatype.
+  ```
+    package main
+    import "fmt"
+    func arithmeticOperations(a int, b ...int) int {
+       sum := 0
+       for _,n := range b {
+           sum += n
+       }
+       output := sum + a
+       return output
+    }
+
+    func main(){
+        fmt.Println(arithmeticOperations(1))   // output is 1
+        fmt.Println(arithmeticOperations(1,2))  // output is 3
+        fmt.Println(arithmeticOperations(1,2,3))  // output is 6
+    }
+  ```
