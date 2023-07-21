@@ -522,3 +522,24 @@ for key, value := range map {
     fmt.Println(key," => ",value)
 }
 ```
+
+# Functions
+* function syntax:
+  ```
+   func <function_name>(function_parameters) <return_type> {
+        // function body
+  }
+  ```
+  ```
+  package main
+  import "fmt"
+  func addNumbers(a int, b int) int {
+     sum := a + b
+     return sum
+  }
+  func main(){
+   output := addNumbers(10, 20)
+   fmt.Println("The sum of the numbers is: ",output)
+  }
+  ```
+  * Note: Function names should not start with numbers and should not contain spaces.
