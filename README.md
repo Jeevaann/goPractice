@@ -584,3 +584,21 @@ for key, value := range map {
         fmt.Println(arithmeticOperations(1,2,3))  // output is 6
     }
   ```
+
+  ### Recursive functions
+  * Recursion is a concept where a function calls itself by direct or indirect means.
+  * The function keeps calling itself until it reaches a base condition.
+  ```
+  package main
+  import "fmt"
+  func factorial(n int) int {
+      if n == 1 {
+         return 1
+      }
+      return n * factorial(n-1)
+  }
+  func main(){
+      output := factorial(5)
+      fmt.Println("The factorial of 5 is",output)
+  }
+  ```
