@@ -602,3 +602,27 @@ for key, value := range map {
       fmt.Println("The factorial of 5 is",output)
   }
   ```
+  
+  ### Anonymous functions
+  * An anonymous function is a function that is declared without any named identifier to refer to it.
+  * They can be used for containing functionality that need not be named and possibly for short-term use.
+  ```
+  package main
+  import "fmt"
+  func main() {
+      x := func(l int, b int) int{
+      return l*b
+      }
+  fmt.Printf("%T \n", x)  //x is of type func(int, int) int
+  fmt.Println(x(20, 30)) // It will give 600 as output
+  ```
+  ```
+  package main
+  import "fmt"
+  func main() {
+      x := func(l int, b int) int{
+      return l*b
+      }(20, 30)
+  fmt.Printf("%T \n", x)  //x is of type int, since the x is storing the output.
+  fmt.Println(x) // It will give 600 as output
+  ```
