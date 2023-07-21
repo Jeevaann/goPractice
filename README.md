@@ -626,3 +626,45 @@ for key, value := range map {
   fmt.Printf("%T \n", x)  //x is of type int, since the x is storing the output.
   fmt.Println(x) // It will give 600 as output
   ```
+
+  ### Higher order functions
+  * Higher order function is a function that receives a function as an argument or returns a function as output.
+  ```
+  package main
+  import "fmt"
+
+  func calcArea(r float64) float64 {
+      return 3.14 * r * r
+  }
+  func calcPerimeter(r float64) float64 {
+      return 2 * 3.14 * r
+  }
+  func calcDiameter(r float64) float64 {
+      return 2 * r
+  }
+
+  func getFunction(query int) func(r float64) float64 {   // returning function as output
+      query_to_func := map[int]func(r float64) float64 {
+          1: calcArea,
+          2: calcPerimeter,
+          3: calcDiameter,
+      }
+      return query_to_func[query]
+  }
+
+  func printResult(radius float64, calcFunction func(r float64) float64){   // taking function as parameter
+      result := calcFunction(radius)
+      fmt.Println("Result: ",result)
+      fmt.Println("Thank you!")
+  }
+
+  func main() {
+      var query int
+      var radius float64
+      fmt.Print("Enter the radius of the circle: ")
+      fmt.Scanf("%f", &radius)
+      fmt.Printf("Enter \n 1. area \n 2. perimeter \n 3. diameter: ")
+      fmt.Scanf("%d", &query)
+      printResult(radius, getFunction(query))
+  }
+  ```
