@@ -669,7 +669,7 @@ for key, value := range map {
   }
   ```
 
-# Defer statement
+### Defer statement
 * A defer statement delays the execution of a function until the surrounding function returns.
 * The deffered call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
 ```
@@ -697,3 +697,22 @@ street-21
 21
 ```
 * The printRollNo function will get executed after the surrounding function is returned as defer keyword is used.
+
+# Pointers
+* A pointer is a variable that holds memory address of another variable.
+* They point where the memory is allocated and provide ways to find or even change the value located at the memory location.
+* & operator: The address of a variable can be obtained by preceding the name of the variable with an ampersand(&) sign, known as address-of operator.
+* * operator: It is known as dereference operator. When placed before an address, it returns the value at that address.
+```
+package main
+import "fmt"
+func main() {
+    i := 10
+    fmt.Printf("%T %v \n", &i, &i)
+    fmt.Printf("%T %v \n", *(&i), *(&i))
+}
+output:
+    *int 0xc00018c008
+    int 10
+```
+         
