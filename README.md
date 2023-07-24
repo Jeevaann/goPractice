@@ -735,3 +735,19 @@ output:
 0xc000010230
 0xc000010230
 ```
+* Dereferencing a pointer
+```
+package main
+import "fmt"
+
+func main() {
+    s := "hello"
+    fmt.Printf("%T %v", s, s)
+    ps := &s
+    *ps = "world"
+    fmt.Printf("%T %v", s, s)
+}
+output:
+string hello
+string world
+```
