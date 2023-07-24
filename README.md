@@ -668,3 +668,32 @@ for key, value := range map {
       printResult(radius, getFunction(query))
   }
   ```
+
+# Defer statement
+* A defer statement delays the execution of a function until the surrounding function returns.
+* The deffered call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
+```
+ package main
+ import "fmt"
+ func printName(name string) {
+    fmt.Println(name)
+ }
+ func printRollNo(roll int) {
+    fmt.Println(roll)
+ }
+ func printAddress(address string) {
+    fmt.Println(address)
+ }
+
+ func main() {
+    printName("Dhruva")
+    defer printRollNo(21)
+    printAddress("street-21")
+}
+
+output:
+Dhruva
+street-21
+21
+```
+* The printRollNo function will get executed after the surrounding function is returned as defer keyword is used.
