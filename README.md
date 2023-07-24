@@ -715,4 +715,21 @@ output:
     *int 0xc00018c008
     int 10
 ```
-         
+### Declaring and initializing Pointers
+var <pointer_name> *<data_type> = &<variable>
+```
+package main
+import "fmt"
+func main() {
+    s := "hello"
+    var b *string = &s
+    fmt.Println(b)
+    var c = &s
+    fmt.Println(c)
+    a := &s
+    fmt.Println(a)
+output:
+0xc000010230
+0xc000010230
+0xc000010230
+```
