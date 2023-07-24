@@ -716,9 +716,9 @@ output:
     int 10
 ```
 ### Declaring and initializing Pointers
-var <pointer_name> *<data_type> = & <variable>
-var <pointer_name> = & <variable>
-<pointer_name> := & <variable>
+* var <pointer_name> *<data_type> = & variable
+* var <pointer_name> = & variable
+* <pointer_name> := & variable
 ```
 package main
 import "fmt"
