@@ -512,7 +512,7 @@ func main() {
 * var <map_name> map[key_data_type]<value_data_type> -> If we initialize the map using this then we cannot add elements to the map.
 * <map_name> := make(map[key_data_type]<value_data_type>,<initial_capacity>)
 * <map_name> := map[key_data_type]<value_data_type>{key/value pairs}
-* Eg: map := map[string]<string>{"en":"English", "hi":"Hindi", "Te":"Telugu"}
+* Eg: map := map[string]string{"en":"English", "hi":"Hindi", "Te":"Telugu"}
 * value,found := <map_name>["en"]. The value will give the value associated with the key "en". The found will give the bool value. If "en" key is there then the found value is true.
 * <map_name>["it"] = "Italian". By this we can add key/value pairs to the map.
 * <map_name>["en"] = "English Language". By this we can update the existing key/value pairs.
@@ -751,3 +751,41 @@ output:
 string hello
 string world
 ```
+* Function can be called in two ways.
+1. Call by value
+2. Call by reference
+* Note: By default, arrays, slices, maps are passed by reference.
+* If a function is called by value then the original parameter value will not be changed.
+* If a function is called by reference then the original parameter value will be changed.
+
+### Structs
+* Struct is a user defined data type.
+* A structure that groups together data elements.
+* Provides a way to reference a series of grouped values through a single variable name.
+* Used when it makes sense to group or associate two or more data variables.
+
+# Declaring and initializing a Struct
+* Declaring a struct
+```
+type <struct_name> struct {
+    //fields
+}
+```
+* Eg:
+```
+type <struct_name> struct {
+    x float64
+    y float64
+}
+```
+```
+type Student struct {
+    name string
+    rollno int
+    marks []int
+    grades map[string]int
+}
+```
+* Initializing a struct
+* var <variable_name> <struct_name>
+* var s Student
