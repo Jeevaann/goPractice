@@ -351,7 +351,7 @@ func main(){
     // block to be executed if condition is not met
   }
 ```
-Note: The else block or else if block must after just after the completion of previous block.
+Note: The else block or else if block must start just after the completion of previous block.
 ```
  package main
  import "fmt"
