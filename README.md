@@ -789,3 +789,84 @@ type Student struct {
 * Initializing a struct
 * var <variable_name> <struct_name>
 * var s Student
+* variable = new(<struct_name>)  // this is not commonly used. This will give pointer as output
+```
+  <variable> := <struct_name> {
+       <field_name>: <value>,
+       <field_name>: <value>,
+  }
+```
+```
+package main
+import "fmt"
+type Student struct {
+    name string
+    rollNo int
+}
+func main() {
+st := Student {                    st := Student("Dhruva", 21)
+    name: "Dhruva",       or    
+    rollNo: 21,
+}
+fmt.Printf("%+v", st)
+}    
+```
+* Accessing fields
+* variable_name.<field_name>
+```
+package main
+import "fmt"
+type Circle struct {
+    radius int
+}
+func main(){
+    var c Circle
+    c.radius = 5
+    fmt.Printf("%+v", c)
+}
+```
+* If we try to access the field that is not defined, it will throw an error.
+* Passing structs to functions.
+```
+package main
+import "fmt"
+type Circle struct {
+   x int
+   y int
+   radius float64
+   area float64
+}
+func calcArea(*c Circle){
+    const PI float64 = 3.14
+    area = (PI * c.radius * c.radius)
+}
+func main() {
+   c := Circle {
+    x: 5,
+    y: 5,
+    radius: 7,
+    area: 0
+}
+   calcArea(&c)
+   fmt.Printf("%+v \n", c)
+```
+* Comparing Structs
+* Structs of the same type can be compared using Go's equality operators.
+```
+package main
+import "fmt"
+type s1 struct {
+    x int
+}
+func main() {
+c := s1{x: 5}
+c1 := s1{x: 6}
+c2 := s1{x: 5}
+if c != c1 {
+    fmt.Println("c and c1 are not equal")
+}
+if c == c2 {
+    fmt.Println("c and c2 are equal")
+}
+}
+```
