@@ -29,7 +29,7 @@
    * string occupies 16 bytes.
    * bool takes values true and false. It occupies 1 byte of memory.
  * Syntax for variable declaration:
- * var <variable_name> <data_type> = <value>
+ * var <variable_name> <data_type> = value
  * var s string = "Hello world!"
  * var i int = 100
  * var b bool = false
@@ -868,5 +868,37 @@ if c != c1 {
 if c == c2 {
     fmt.Println("c and c2 are equal")
 }
+}
+```
+* Methods:
+* A method augments a function by adding an extra parameter section immediately after the 'func' keyword that accepts a single argument. This argument is called a receiver.
+```
+func (<receiver>) <method_name>(<parameters>) <return_parameters> {
+    // code
+}
+```
+```
+func (c Circle) area() float64{
+    // code
+}
+
+func (c *Circle) area() float64{
+    // code
+}
+```
+```
+package main
+import "fmt"
+type Circle struct {
+    radius float64
+    area float64
+}
+func (c *Circle) calcArea(){
+    c.area = 3.14 * c.radius * c.radius
+}
+func main(){
+    c := Circle{radius: 5}
+    c.calcArea()
+    fmt.Printf("%+v", c)
 }
 ```
